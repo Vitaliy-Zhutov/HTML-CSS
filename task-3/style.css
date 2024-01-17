@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-section__header {
+    margin-top: 40px;
+}
+
+.main-section__nav {
+    margin-top: 11px;
+    margin-bottom: 12px;
+}
+
+.title {
+    margin-top: 143px;
+    margin-bottom: 17px;
+}
+
+.left-wrapper__botton {
+    margin-top: 37px;
+}
+
+.right-wrapper__img {
+    margin-top: 82px;
+}
+
+.brand-logo {
+    margin-top: 97px;
+}
+
+
+

@@ -1,0 +1,79 @@
+@import 'mixins';
+
+.footer {
+	min-width: $widthSite;
+	background-color: $colorBlack;
+	@include flexBaseBetween;
+}
+.copyright {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.copyright__text {
+	color: $colorWhite;
+	font-size: 16px;
+	font-weight: 400;
+}
+.footer__icons {
+	width: 147px;
+	height: 32px;
+	display: flex;
+	gap: 7px;
+}
+.rectangle_icons {
+	width: 32px;
+	height: 32px;
+	background-color: $colorWhite;
+	border: $borderOneSolidWhite;
+	font-size: 16px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.rectangle_icons-pink {
+	&:hover {
+		background-color: $colorPink;
+		border: $borderOneSolidPink;
+		transition: 0.3s;
+	}
+}
+.img-footer-pink {
+	&:hover {
+		content: url(img/footer-icons-2-hover.svg);
+		transition: 0.3s;
+	}
+}
+.footer__icons-img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@media (max-width: 1024px) {
+	.center {
+		padding-left: calc(50% - 368px);
+		padding-right: calc(50% - 368px);
+	}
+    .footer {
+		min-width: 768px;
+	}
+}
+
+@media (max-width: 767px) {
+	.center {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+    .footer {
+		min-width: 375px;
+		flex-direction: column;
+		flex-direction: column-reverse;
+	}
+	.copyright {
+		margin-top: 40px;
+		margin-bottom: 9px;
+	}
+	.footer__icons {
+		margin-top: 43px;
+	}
+}

@@ -1,0 +1,29 @@
+@import 'mixins';
+
+.breadcrumbs {
+    min-width: $widthSite;
+    background-color: #F8F3F4;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include flexBaseBetween;
+}
+.breadcrumbs-title {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0%;
+    text-align: left;
+    color: $colorPink;
+}
+.breadcrumbs-links {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 17px;
+    letter-spacing: 0%;
+    color: #636363;
+    text-align: left;
+}
+.breadcrumbs-links__page {
+    color: $colorPink;
+    font-weight: 700;
+}

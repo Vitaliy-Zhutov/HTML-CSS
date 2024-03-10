@@ -1,0 +1,254 @@
+.registration {
+    @include flexBaseBetween;
+}
+
+.registration-form {
+    @include flexBaseColumn;
+
+    .name-fields-reg {
+        width: 360px;
+        height: 141px;
+        margin-top: 64px;
+        margin-bottom: 30px;
+        display: flex;
+	    flex-direction: column;
+        gap: 20px;
+
+        &__title {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 19px;
+            letter-spacing: 0%;
+            text-align: left;
+            color: $colorBlack;
+        }
+
+        &__input-box {
+            width: 324px;
+            height: 35px;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            border: 1px solid #a4a4a4;
+            padding: 0px 18px 0px 18px;
+            &::placeholder {
+                font-size: 13px;
+                font-weight: 300;
+                line-height: 16px;
+                letter-spacing: 0%;
+                text-align: left;
+                color: #b1b1b1;
+            }
+        }
+    }
+
+    .radio-buttons-reg {
+        margin-bottom: 32px;
+        margin-left: 12px;
+        display: flex;
+        gap: 20px;
+
+        input[type="radio"]:checked, 
+        input[type="radio"]:not(:checked) { 
+            position: absolute;
+            left: -9999px;
+        }
+
+        input[type="radio"]:checked + label, 
+        input[type="radio"]:not(:checked) + label {
+            display: inline-block;
+            position: relative;
+            padding-left: 28px;
+            line-height: 20px;
+            cursor: pointer;
+        }
+
+        input[type="radio"]:checked + label:before, 
+        input[type="radio"]:not(:checked) + label:before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #a4a4a4;
+            background-color: #ffffff;
+        }
+
+        input[type="radio"]:checked + label:before, 
+        input[type="radio"]:not(:checked) + label:before {
+            border-radius: 100%;
+        }
+
+        input[type="radio"]:checked + label:after, 
+        input[type="radio"]:not(:checked) + label:after {
+            content: "";
+            position: absolute;
+            -webkit-transition: all 0.2s ease;
+            -moz-transition: all 0.2s ease;
+            -o-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+        }
+
+        input[type="radio"]:checked + label:after, 
+        input[type="radio"]:not(:checked) + label:after {
+            left: 5px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: $colorPink;
+        }
+
+        input[type="radio"]:not(:checked) + label:after {
+            opacity: 0;
+        }
+
+        input[type="radio"]:checked + label:after {
+            opacity: 1;
+        }
+
+        &__label-text {
+            margin-left: -10px;
+            font-size: 11px;
+            font-weight: 300;
+            line-height: 13px;
+            letter-spacing: 0%;
+            text-align: left;
+            color: $colorBlack;
+        }
+    }
+
+    .login-fields-reg {
+        width: 360px;
+        height: 141px;
+        margin-bottom: 16px;
+        display: flex;
+	    flex-direction: column;
+        gap: 20px;
+
+        &__title {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 19px;
+            letter-spacing: 0%;
+            text-align: left;
+            color: $colorBlack;
+        }
+
+        &__input-box {
+            width: 324px;
+            height: 35px;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            border: 1px solid #a4a4a4;
+            padding: 0px 18px 0px 18px;
+            &::placeholder {
+                font-size: 13px;
+                font-weight: 300;
+                line-height: 16px;
+                letter-spacing: 0%;
+                text-align: left;
+                color: #b1b1b1;
+            }
+        }
+    }
+
+    .text-reg {
+        width: 360px;
+        height: 32px;
+        margin-bottom: 40px;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 16px;
+        letter-spacing: 0%;
+        text-align: left;
+        color: #b1b1b1;
+    }
+
+    .button-reg {
+        margin-bottom: 96px;
+        
+        &__btn {
+            padding: 16px 30px;
+            background-color: $colorPink;
+            color: $colorWhite;
+            border: $borderOneSolidWhite;
+            cursor: pointer;
+            transition: 0.5s;
+            &_style {
+                padding-right: 20px;
+            }
+            &:hover {
+                border: 1px solid #a4a4a4;
+                background-color: #f3f3f3;
+                color: #b1b1b1;
+                transition: 0.5s;
+            }
+            &:hover path {
+                fill: #b1b1b1;
+                transition: 0.5s;
+            }
+        }
+    }
+}
+
+.registration-content {
+    width: 652px;
+    min-height: 334px;
+    margin-top: 64px;
+    margin-bottom: 250px;
+
+    &__title {
+        width: 265px;
+        min-height: 30px;
+        margin-bottom: 20px;
+        &_style {
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 29px;
+            letter-spacing: 0%;
+            text-align: left;
+            color: $colorBlack;
+        }
+    }
+
+    &__text {
+        width: 652px;
+        min-height: 58px;
+        margin-bottom: 20px;
+        &_style {
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 29px;
+            letter-spacing: 0%;
+            text-align: left;
+            color: $colorBlack;
+        }
+    }
+
+    &__list {
+        margin-left: 44px;
+        width: 600px;
+        min-height: 204px;
+        &_text {
+            position: relative;
+            margin-bottom: 16px;
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 29px;
+            letter-spacing: 0%;
+            text-align: left;
+            color: $colorBlack;
+            ::before {
+                position: absolute;
+                content: url(img/check-mark-reg.svg);
+                left: -42px;
+                bottom: 14px;
+                width: 20px;
+                height: 16px;
+            }
+        }
+    }
+}

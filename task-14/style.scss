@@ -1,0 +1,61 @@
+@import '_var';
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body, html {
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul, li {
+	list-style-type: none;
+}
+
+summary {
+	display: block;
+}
+summary::-webkit-ditails-marker {
+	display: none;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+}
+
+.center {
+	padding-left: calc(50% - $widthSite / 2);
+	padding-right: calc(50% - $widthSite / 2);
+}
+
+@import '_header';
+
+@import '_top';
+
+@import '_categories';
+
+@import '_shop';
+
+@import '_advantages';
+
+@import '_feedback';
+
+@import '_footer';
+
+@import '_breadcrumbs';
+
+@import '_slide';
+
+@import '_catalog';
+
+@import '_product';
+
+@import '_shopping-cart';
+
+@import '_registration';

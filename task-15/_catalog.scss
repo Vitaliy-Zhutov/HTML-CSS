@@ -1,0 +1,197 @@
+.sorting-blok {
+    position: relative;
+    height: 132px;
+    display: flex;
+    gap: 30px;
+    padding-top: 39px;
+    box-sizing: border-box;
+    z-index: 3;
+}
+
+.filter {
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    padding-top: 13px;
+    width: 360px;
+    cursor: pointer;
+
+    &__content {
+        padding-top: 13px;
+        background-color: $colorWhite;
+        padding: 0px 16px 16px 16px;
+        box-shadow: 6px 35px 35px rgba(0, 0, 0, 0.21);
+    }
+
+    &[open] {
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+        background-color: $colorWhite;
+    }
+
+    &[open] .filter__title {
+        color: $colorPink;
+    }
+
+    &[open] path {
+        fill: $colorPink;
+    }
+
+    &__summary {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        padding-left: 16px;
+        width: 70px;
+    }
+
+    &__title {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 17px;
+        letter-spacing: 0%;
+        text-align: left;
+        color: $colorBlack;
+    }
+
+    &__item {
+        margin-top: 16px;
+    }
+
+    [open] .filter__heading {
+        color: $colorPink;
+    }
+
+    &__heading {
+        position: relative;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0%;
+        text-align: left;
+        color: #6f6e6e;
+        padding: 8px 11px 11px 11px;
+        border-bottom: 1px solid #ebebeb;
+        border-left: 5px solid $colorPink;
+        &:hover::after{
+            position: absolute;
+            content:'';
+            border: 1px solid $colorPink;
+            width: 243px;
+            top: 35.5px;
+            right: 82px;
+        }
+    }
+
+    &__links-box {
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+        padding: 20px 16px;
+    }
+
+    &__link {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0%;
+        text-align: left;
+        color: #6f6e6e;
+        &:hover {
+            color: $colorPink;
+        }
+    }
+}
+
+.sorting {
+    display: flex;
+    gap: 28px;
+    padding-top: 12px;
+    cursor: pointer;
+    
+
+    .sorting-details {
+        position: relative;
+    }
+    
+    .summary-sorting {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .summary-sorting-title {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0%;
+        text-align: left;
+        color: #6f6e6e;
+    }
+
+    .sorting-box {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+        background: rgb(255, 255, 255);
+        padding: 7px 30px 11px 9px;
+        left: -9px;
+        top: 22px;
+    }
+
+    .sorting-check {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0%;
+        text-align: left;
+        color: #6f6e6e;
+    }
+}
+
+.pagination {
+    @include flexBaseColumn;
+    margin-bottom: 98px;
+    
+    .pagination-link-box {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        border: 1px solid rgb(235, 235, 235);
+        padding: 12px 16px;
+    }
+
+    .pagination-link {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 19px;
+        letter-spacing: 0%;
+        text-align: left;
+        color: #c4c4c4;
+    }
+
+    .pagination-link-pink {
+        color: $colorPink;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .sorting-blok {
+        min-width: $widthSite768;
+        justify-content: space-between
+    }
+
+    .sorting-blok {
+        height: 80px;
+        padding-top: 12px;
+    }
+
+    .pagination {
+        margin-bottom: 64px;
+    }
+}

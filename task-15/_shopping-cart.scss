@@ -1,0 +1,341 @@
+@import 'mixins';
+
+.shopping-cart {
+    @include flexBaseBetween;
+    gap: 128px;
+}
+
+.wrapper-left {
+    margin-top: 96px;
+    margin-bottom: 128px;
+    width: 652px;
+    @include flexBaseColumn;
+    gap: 40px;
+
+    .card-box {
+        @include flexBaseColumn;
+        gap: 40px;
+    }
+
+    .product-card {
+        width: 652px;
+        height: 306px;
+        display: flex;
+        border: 1px solid #EAEAEA;
+        -webkit-box-shadow: 8px 8px 15px 0px rgba(29, 29, 29, 0.2);
+        -moz-box-shadow: 8px 8px 15px 0px rgba(29, 29, 29, 0.2);
+        box-shadow: 8px 8px 15px 0px rgba(29, 29, 29, 0.2);
+            &:hover {
+            transform: scale(1.05, 1.05);
+            transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -webkit-transition: all 0.5s ease-in-out;
+        }
+
+        .img-card {
+            width: 262px;
+            height: 306px;
+        }
+
+        .img-card-1 {
+            background-color: #f3eeef;
+        }
+
+        .img-card-2 {
+            background-color: #f3eeef;
+        }
+
+        .content-card {
+            position: relative;
+            width: 390px;
+            height: 306px;
+            &::after {
+                position: absolute;
+                content:url(img/delete-x.svg);
+                top: 28px;
+                right: 22px;
+                cursor: pointer;
+            }
+        }
+
+        .content-blok {
+            width: 262px;
+            height: 222px;
+            margin: 22px 96px 62px 32px;
+
+            .content-card-title {
+                width: 262px;
+                height: 58px;
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 29px;
+                letter-spacing: 0%;
+                text-align: left;
+                color: $colorBlack;
+            }
+    
+            .specifications-card {
+                width: 166px;
+                height: 122px;
+                margin: 42px 96px 0 0;
+            }
+
+            .specifications-text {
+                margin-bottom: 6px;
+                font-size: 22px;
+                font-weight: 400;
+                line-height: 26px;
+                letter-spacing: 0%;
+                text-align: left;
+                color: #575757;
+            }
+
+            .specifications-sub-prise {
+                color: $colorPink;
+            }
+
+            .specifications-sub-color, .specifications-sub-size {
+                color: #6e6e6e;
+            }
+
+            .quantity-product {
+                display: flex;
+                gap: 24px;
+                align-items:center;
+            }
+
+            .specifications-input {
+                width: 44px;
+                height: 24px;
+                &::placeholder {
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 22px;
+                    letter-spacing: 0%;
+                    padding: 0px 16px 0px 0px;
+                    color: #6e6e6e;
+                }
+            }
+
+            input[type="number"] {
+                font-size: 18px;
+                line-height: 22px;
+                padding-left: 16px;
+                outline: none;
+                border: 1px solid rgb(234, 234, 234);
+                color: #6e6e6e;
+                cursor: pointer;
+                &:focus {
+                    border: 1px solid $colorBlack;
+                }
+            }
+        } 
+    }
+
+    .button-box {
+        @include flexBaseBetween;
+        margin-top: 32px;
+        gap: 192px;
+
+        .buttons-left-wrapper {
+            width: 235px;
+            height: 55px;
+            border: 1px solid #a4a4a4;
+            background-color: $colorWhite;
+            color: $colorBlack;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .buttons-left-wrapper:hover {
+            background-color: $colorPink;
+            color: $colorWhite;
+            border: $borderOneSolidWhite;
+        }
+    }
+}
+
+.wrapper-right {
+    padding-top: 113px;
+    margin-bottom: 342px;
+    width: 360px;
+    @include flexBaseColumn;
+    gap: 58px;
+
+    .adress-box {
+        width: 360px;
+        height: 272px;
+
+        .adress-title {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 19px;
+            letter-spacing: 0%;
+            text-align: left;
+            color: $colorBlack;
+        }
+
+        .adress-input {
+            width: 324px;
+            height: 45px;
+            margin-top: 20px;
+            cursor: pointer;
+            &::placeholder {
+                font-size: 13px;
+                font-weight: 300;
+                line-height: 16px;
+                letter-spacing: 0%;
+                text-align: left;
+                color: #b1b1b1;
+            }
+            &:focus::placeholder {
+                color: $colorBlack;
+            }
+        }
+
+        input[type="text"] {
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            border: 1px solid #a4a4a4;
+            padding: 0px 18px 0px 18px;
+        }
+
+        input, textarea {
+            &:focus {
+                border: 1px solid $colorBlack;
+            }
+        }
+
+        .adress-buttons {
+            margin-top: 23px;
+            padding: 12px 14px;
+            border: 1px solid #a4a4a4;
+            background-color: $colorWhite;
+            color: #b1b1b1;
+            font-size: 11px;
+            font-weight: 300;
+            line-height: 13px;
+            letter-spacing: 0%;
+            text-align: left;
+            cursor: pointer;
+            transition: 0.5s;
+            &:hover {
+                background-color: $colorPink;
+                color: $colorWhite;
+                border: $borderOneSolidWhite;
+            }
+        }
+    }
+
+    .price-box {
+        width: 360px;
+        height: 214px;
+        background-color: #f3f3f3;
+
+        .price-text-blok-1 {
+            width: 108px;
+            margin-top: 39px;
+            margin-left: 218px;
+            margin-right: 34px;
+        }
+        
+        .price-text-sub {
+            width: 218px;
+            font-size: 11px;
+            font-weight: 400;
+            line-height: 13px;
+            letter-spacing: 0%;
+            text-align: left;
+            color: #a4a4a4;
+        }
+
+        .price-text-blok-2 {
+            width: 170px;
+            margin-top: 12px;
+            margin-left: 153px;
+            margin-right: 37px;
+        }
+
+        .price-text-grand {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19px;
+            letter-spacing: 0%;
+            text-align: left;
+            color: $colorBlack;
+        }
+
+        .price-text-grand-pink {
+            color: $colorPink;
+        }
+
+        .price-line {
+            margin-top: 21px;
+            margin-left: 42px;
+            width: 275px;
+            height: 0;
+            border: 1px solid #e2e2e2;
+        }
+
+        .buttons-right-wrapper {
+            margin-top: 17px;
+            margin-left: 42px;
+            margin-right: 42px;
+            width: 273px;
+            height: 50px;
+            background-color: $colorPink;
+            color: $colorWhite;
+            border: $borderOneSolidWhite;
+            cursor: pointer;
+            transition: 0.5s;
+            &:hover {
+                border: 1px solid #a4a4a4;
+                background-color: #f3f3f3;
+                color: #b1b1b1;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .shopping-cart {
+        min-width: auto;
+        @include flexBaseColumn;
+        gap: 0px;
+    }
+
+    .wrapper-left {
+        margin-top: 60px;
+        margin-bottom: 62px;
+        width: 734px;
+        .product-card {
+            width: 734px;
+            height: 306px;
+    
+            .content-card {
+                width: 472px;
+            }
+        }
+    
+        .button-box {
+            margin-top: 22px;
+            gap: 42px;
+        }
+    }
+
+    .wrapper-right {
+        min-width: $widthSite768;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        padding-top: 0px;
+        margin-bottom: 128px;
+        .price-box {
+            margin-top: 18px;
+        }
+    }
+}

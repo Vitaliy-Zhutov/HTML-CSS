@@ -1,0 +1,11 @@
+@mixin flexBaseBetween() {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flexBaseColumn() {
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+}

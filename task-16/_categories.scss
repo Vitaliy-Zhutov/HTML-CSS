@@ -1,0 +1,144 @@
+.categories {
+	display: grid;
+	grid-template-columns: repeat(3, 360px);
+	gap: 30px;
+	margin-bottom: 96px;
+}
+.categories-items {
+	position: relative;
+	background-color: $colorBlack;
+	width: 360px;
+	height: 260px;
+}
+.categories-items__big {
+	position: relative;
+	background-color: $colorBlack;
+	grid-column: span 3;
+	grid-row: span 2;
+}
+.section-img {
+	opacity: 0.3;
+}
+.categories-title {
+	position: absolute;
+	width: 154px;
+	top: 105px;
+	left: 103px;
+	text-align: center;
+	color: $colorWhite;
+	font-size: 16px;
+	font-weight: 400;
+}
+.categories-title__big {
+	position: absolute;
+	width: 160px;
+	top: 65px;
+	left: 490px;
+	text-align: center;
+	color: $colorWhite;
+	font-size: 16px;
+	font-weight: 400;
+}
+.section-img__big {
+	opacity: 0.3;
+}
+.categories-title__pink {
+	color: $colorPink;
+	font-size: 24px;
+	font-weight: 700;
+}
+.categories-title__pink-big {
+	color: $colorPink;
+	font-size: 24px;
+	font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+	
+    .categories {
+		display: grid;
+		grid-template-columns: repeat(3, 232px);
+		gap: 19px;
+		margin-bottom: 110px;
+	}
+	.categories-items {
+		width: 232px;
+		height: 167px;
+	}
+	.section-img {
+		opacity: 0.3;
+	}
+	.section-img__img {
+		width: 232px;
+		height: 168px;
+	}
+	.categories-title {
+		width: 154px;
+		top: 50px;
+		left: 39px;
+	}
+	.categories-title__big {
+		width: 160px;
+		top: 28px;
+		left: 287px;
+	}
+	.section-img__big {
+		opacity: 0.3;
+	}
+	.section-img__img-big {
+		width: 735px;
+		height: 116px;
+	}
+}
+
+@media (max-width: 767px) {
+
+    .categories {
+		grid-template-columns: repeat(1, 344px);
+		justify-content: center;
+		gap: 32px;
+		margin-bottom: 64px;
+	}
+	.categories-items__big {
+		grid-column: span 1;
+		grid-row: span 1;
+	}
+	.categories-items {
+		width: 344px;
+		height: 248px;
+	}
+	.section-img {
+		width: 344px;
+	}
+	.section-img__img {
+		width: 344px;
+		height: 248px;
+	}
+	.categories-title {
+		width: 154px;
+		top: 96px;
+		left: 95px;
+	}
+	.categories-title__big {
+		width: 160px;
+		top: 24px;
+		left: 92px;
+	}
+	.section-img__big {
+		width: 344px;
+		&::before {
+			content: "";
+			background-image: url("img/accesories-2.svg");
+			width: 344px;
+			height: 111px;
+			display: block;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+	.section-img__img-big {
+		display: none;
+	}
+}
+
+

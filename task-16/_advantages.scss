@@ -1,0 +1,64 @@
+@import 'mixins';
+
+.advantages {
+	min-width: $widthSite;
+	background-color: $colorBlack;
+	display: flex;
+	align-items: center;
+	gap: 30px;
+}
+.advantages__icons {
+	height: 32px;
+}
+.advantages__items {
+	margin-top: 104px;
+	margin-bottom: 104px;
+	width: 360px;
+	min-height: 134px;
+	@include flexBaseColumn;
+	justify-content: center;
+}
+.advantages__title {
+	color: $colorWhite;
+	margin-top: 28px;
+	margin-bottom: 16px;
+	font-size: 20px;
+	font-weight: 400;
+}
+.advantages__text {
+	color: $colorWhite;
+	font-size: 14px;
+	text-align: center;
+	font-weight: 300;
+}
+
+@media (max-width: 1024px) {
+	
+    .advantages {
+		min-width: 768px;
+		flex-direction: column;
+		gap: 48px;
+		padding-top: 48px;
+		padding-bottom: 64px;
+	}
+	.advantages__items {
+		margin: 0;
+	}
+	.advantages__icons {
+		height: 39px;
+	}
+}
+
+@media (max-width: 767px) {
+	
+    .advantages {
+		min-width: auto;
+		gap: 46px;
+		padding-bottom: 81px;
+	}
+	.advantages__items {
+		width: 348px;
+		height: 128px;
+		margin: 0;
+	}
+}

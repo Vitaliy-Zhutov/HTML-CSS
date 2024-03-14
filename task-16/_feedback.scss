@@ -1,0 +1,221 @@
+@import 'mixins';
+
+.feedback-bg {
+	position: relative;
+	background-image: url('img/footer-bg.jpg');
+	background-size: no-repeat;
+	background-position: center;
+	background-size: cover;
+	min-width: $widthSite;
+	height: 448px;
+	&::before {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #F4F4F4;
+		opacity: 0.7;
+	}
+}
+.feedback {
+	min-width: $widthSite;
+	@include flexBaseBetween;
+}
+.reviews {
+	display: flex;
+	align-items: center;
+}
+.reviews-img {
+	&::after {
+		top: 97px;
+		position: absolute;
+		content: url(img/eclips-img-women.png);
+		margin-left: 120px;
+		width: 96px;
+		z-index: 1;
+	}
+}
+.reviews-text {
+	display: block;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 400;
+	color: $colorBlack;
+	z-index: 2;
+	margin-top: 65px;
+}
+.subscribe {
+	top: -30px;
+	position: relative;
+	width: 557px;
+	height: 142px;
+	@include flexBaseColumn;
+	justify-content: center;
+	gap: 32px;
+	margin-bottom: 25px;
+}
+.subscribe-content {
+	width: 557px;
+	height: 61px;
+}
+.subscribe-title {
+	font-size: 24px;
+	text-align: center;
+	color: $colorBlack;
+	font-weight: 700;
+	z-index: 2;
+}
+.subscribe-title_min {
+	font-size: 18px;
+	font-weight: 400;
+}
+.subscribe-form {
+	width: 356px;
+	height: 49px;
+}
+.subscribe__btn {
+	position: absolute;
+	width: 356px;
+	height: 49px;
+	background-color: #E1E1E1;
+	border: 1px solid #E1E1E1;
+	border-radius: 24px;
+	font-size: 16px;
+	left: -66px;
+	padding: 0px 22px 0px 22px;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	margin: 0;
+	&::placeholder {
+		color: $colorBlack;
+		font-size: 14px;
+	}
+}
+
+.form-email {
+	position: absolute;
+	top: 120px;
+	right: 430px;
+}
+input {
+	&:focus {
+		outline: none;
+	}
+}
+textarea {
+	&:focus {
+		outline: none;
+	}
+}
+.btn-email {
+	border: none;
+	color: $colorWhite;
+	font-size: 14px;
+	cursor: pointer;
+	&:hover {
+		border: $borderOneSolidWhite;
+	}
+}
+.subscribe__btn-pink {
+	position: absolute;
+	left: 266px;
+	background-color: $colorPink;
+	border-radius: 0px 24px 24px 0px;
+	width: 100px;
+	height: 49px;
+	z-index: 1;
+}
+.subscribe__btn_text-pink {
+	position: absolute;
+	color: $colorWhite;
+	font-size: 14px;
+	font-weight: 400;
+	top: 16px;
+	left: 17px;
+}
+
+@media (max-width: 1024px) {
+	
+	.feedback-bg {
+		position: relative;
+		background-image: url('img/footer-bg.jpg');
+		background-position: 25%;
+		background-size: cover;
+		min-width: 768px;
+		height: 614px;
+	}
+	.feedback {
+		min-width: 768px;
+		flex-direction: column;
+		justify-content: center;
+		gap: 48px;
+	}
+	.reviews {
+		width: 360px;
+		margin-top: 64px;
+	}
+	.reviews-text {
+		width: 360px;
+		height: 99px;
+		margin-top: 30px;
+	}
+}
+@media (max-width: 767px) {
+	
+	.feedback-bg {
+		background-position: 27%;
+		min-width: 610px;
+		height: 550px;
+	}
+	.feedback {
+		min-width: auto;
+	}
+	.reviews {
+		width: 343px;
+		height: 154px;
+	}
+	.reviews-img {
+		&::after {
+			top: 64px;
+			width: 92px;
+		}
+	}
+	.reviews-text {
+		width: 343px;
+		height: 73px;
+		font-size: 18px;
+		margin: 0;
+	}
+	.subscribe {
+		width: 341px;
+		height: 124px;
+		gap: 22px;
+	}
+	.subscribe-content {
+		width: 271px;
+		height: 54px;
+	}
+	.subscribe-title_min {
+		font-size: 14px;
+	}
+	.subscribe__btn {
+		width: 222px;
+		height: 47px;
+	}
+	input[type="email"] {
+		left: -8px;
+	}
+	.form-email {
+		top: 120px;
+		right: 336px;
+	}
+	.subscribe__btn-pink {
+		left: 236px;
+	}
+}
